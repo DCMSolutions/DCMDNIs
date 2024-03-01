@@ -1,0 +1,76 @@
+﻿@page "/addDni/{idDni:int}"
+
+@if (idDni == 0)
+{
+    <h1>Agregar DNI</h1>
+}
+else
+{
+    <h1>Editar DNI</h1>
+}
+
+<EditForm Model="@dni" OnValidSubmit="Save">
+    <DataAnnotationsValidator />
+    <div style="display: flex; justify-content: right;">
+        <button type="button" @onclick="BotonAtras" class="btn btn-outline-info" title="Volver"><FeatherArrowLeft Color="blue" /></button>
+        <button type="submit" class="btn btn-outline-success" style="margin-left:1vw;" title="Guardar"><FeatherSave Color="green" /></button>
+    </div>
+
+    <div class="form-group">
+        <label><strong>Número</strong></label>
+        <InputNumber @bind-Value="dni.Numero" class="form-control form-control-user" placeholder="Número" />
+        <ValidationMessage For="(()=> dni.Numero)" style="color:red;" />
+    </div>
+    <div class="form-group">
+        <label><strong>Nombre</strong></label>
+        <InputText @bind-Value="dni.Nombre" class="form-control form-control-user" placeholder="Nombre" />
+        <ValidationMessage For="(()=> dni.Nombre)" style="color:red;" />
+    </div>
+    <div class="form-group">
+        <label><strong>Apellido</strong></label>
+        <InputText @bind-Value="dni.Apellido" class="form-control form-control-user" placeholder="Apellido" />
+        <ValidationMessage For="(()=> dni.Apellido)" style="color:red;" />
+
+    </div>
+    <div class="form-group">
+        <label><strong>Habilitado</strong></label>
+        <br/>
+        <RadzenCheckBox @bind-Value=@dni.Habilitado Name="CheckHabilitado" />
+    </div>
+</EditForm>
+
+@code {
+    [Parameter] public int idDni { get; set; }
+
+    DniDTO dni = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (idDni != 0)
+        {
+            dni = await confCrud.GetDniById(idDni);
+        }
+        else
+        {
+            dni.Habilitado = false;
+        }
+    }
+
+    async Task Save()
+    {
+        if (idDni == 0)
+        {
+            var orta = await confCrud.AddDni(dni);
+        }
+        else
+        {
+            var orta = await confCrud.EditDni(dni);
+        }
+        nav.NavigateTo("/dnis");
+    }
+
+    void BotonAtras()
+    {
+        nav.NavigateTo("/dnis");
+    }
+}

@@ -1,0 +1,45 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = DCMDNIs.Client
+build_property.RootNamespace = DCMDNIs.Client
+build_property.ProjectDir = D:\DCM\DCMDNIs\DCMDNIs\Client\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\DCM\DCMDNIs\DCMDNIs\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/DCM/DCMDNIs/DCMDNIs/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DCM/DCMDNIs/DCMDNIs/Client/Pages/Dni/AddDni.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG5pXEFkZERuaS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DCM/DCMDNIs/DCMDNIs/Client/Pages/Dni/Dnis.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRG5pXERuaXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DCM/DCMDNIs/DCMDNIs/Client/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DCM/DCMDNIs/DCMDNIs/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DCM/DCMDNIs/DCMDNIs/Client/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-68b0b2wuxz
+
+[D:/DCM/DCMDNIs/DCMDNIs/Client/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-s369ly936x

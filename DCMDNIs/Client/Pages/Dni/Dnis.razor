@@ -1,0 +1,71 @@
+﻿@page "/dnis"
+
+<h1><strong>DNIs</strong></h1>
+<br />
+<label>Lista de DNIs</label>
+<br />
+<hr />
+<RadzenButton ButtonStyle="ButtonStyle.Primary" Click=@(() => gotoAddDni(0))><FeatherPlusCircle Color="black" /></RadzenButton>
+
+<br />
+<br />
+
+
+@if (listaDeDNIs != null)
+{
+    <div class="tablacontent" style="position:relative;">
+        <RadzenDataGrid AllowColumnResize="true" AllowAllowAlternatingRows="true" FilterMode="FilterMode.Simple" AllowSorting="false" PageSize="8"
+                    AllowPaging="true" ShowPagingSummary="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" EmptyText="No hay DNIs cargados."
+                    Data="@listaDeDNIs" TItem="DniDTO" LogicalFilterOperator="LogicalFilterOperator.Or" PagerHorizontalAlign="HorizontalAlign.Center">
+            <Columns>
+                <RadzenDataGridColumn TItem="DniDTO" Property="Numero" Title="Número" />
+                <RadzenDataGridColumn TItem="DniDTO" Property="Nombre" Title="Nombre" />
+                <RadzenDataGridColumn TItem="DniDTO" Property="Apellido" Title="Apellido" />
+                <RadzenDataGridColumn TItem="DniDTO" Property="Habilitado" Title="Habilitado" />
+                <RadzenDataGridColumn TItem="DniDTO" Title="Editar">
+                    <Template Context="data">
+                        <RadzenButton ButtonStyle="ButtonStyle.Success" Click=@(() => gotoAddDni(data.Id))><FeatherEdit Color="black" /></RadzenButton>
+                    </Template>
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn TItem="DniDTO" Title="Eliminar">
+                    <Template Context="data">
+                        <RadzenButton ButtonStyle="ButtonStyle.Danger" Click=@(() => AlertaDelete(data.Id))><FeatherTrash2 Color="black" /></RadzenButton>
+                    </Template>
+                </RadzenDataGridColumn>
+            </Columns>
+
+        </RadzenDataGrid>
+    </div>
+}
+
+
+
+<br />
+
+
+@code {
+    List<DniDTO> listaDeDNIs;
+
+    protected override async Task OnInitializedAsync()
+    {
+        listaDeDNIs = await confCrud.GetDnis();
+    }
+
+    async Task AlertaDelete(int idDni)
+    {
+        var result = await DialogService.Confirm("Está seguro?", "Eliminará el DNI", new ConfirmOptions() { OkButtonText = "Si", CancelButtonText = "No" });
+        if (result == true) await deleteDni(idDni);
+    }
+
+    async Task deleteDni(int idDni)
+    {
+        await confCrud.DeleteDni(idDni);
+        await OnInitializedAsync();
+    }
+
+    async Task gotoAddDni(int idDni)
+    {
+        nav.NavigateTo($"/adddni/{idDni}");
+    }
+
+}

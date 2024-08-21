@@ -10,7 +10,7 @@ namespace DCMDNIs.Server.Repositorio.Contrato
     public interface IDniRepositorio
     {
         //funciones
-        Task<bool> GetHabilitadoByNumero(int numero);
+        Task<Dni> GetHabilitadoByNumero(int numero);
         
         //CRUD Dnis
         Task<List<Dni>> GetDnis();

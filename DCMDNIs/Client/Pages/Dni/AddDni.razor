@@ -30,6 +30,11 @@ else
         <label><strong>Apellido</strong></label>
         <InputText @bind-Value="dni.Apellido" class="form-control form-control-user" placeholder="Apellido" />
         <ValidationMessage For="(()=> dni.Apellido)" style="color:red;" />
+    </div>
+    <div class="form-group">
+        <label><strong>Mensaje</strong></label>
+        <InputText @bind-Value="dni.Mensaje" class="form-control form-control-user" placeholder="Mensaje" />
+        <ValidationMessage For="(()=> dni.Mensaje)" style="color:red;" />
 
     </div>
     <div class="form-group">

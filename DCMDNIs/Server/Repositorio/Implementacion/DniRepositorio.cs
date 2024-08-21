@@ -1,6 +1,8 @@
-﻿using DCMDNIs.Server.Context;
+﻿using AutoMapper;
+using DCMDNIs.Server.Context;
 using DCMDNIs.Server.Models;
 using DCMDNIs.Server.Repositorio.Contrato;
+using DCMDNIs.Shared.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -13,24 +15,39 @@ namespace DCMDNIs.Server.Repositorio.Implementacion
     public class DniRepositorio : IDniRepositorio
     {
         private readonly DcmdnisContext _dbContext;
-        public DniRepositorio(DcmdnisContext dbContext)
+        private readonly IMapper _mapper;
+        public DniRepositorio(DcmdnisContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
+            _mapper = mapper;
         }
 
         //funciones
-        public async Task<bool> GetHabilitadoByNumero(int numero)
+        public async Task<Dni> GetHabilitadoByNumero(int numero)
         {
             try
             {
                 var result = await _dbContext.Dnis
                     .Where(Dni => Dni.Numero == numero)
                     .FirstOrDefaultAsync();
-                if (result != null) return result.Habilitado == true;
-                else throw new Exception("No existe dni con ese numero en la base de datos");
+                if (result != null)
+                {
+                    Console.WriteLine("Se consulto por el DNI " + numero + (result.Habilitado == true ? " y " : " y no ") + "estaba habilitado.");
+                    return result;
+                }
+                else
+                {
+                    Console.WriteLine("Se consulto por el DNI " + numero + " y no estaba en la base de datos.");
+                    return new Dni
+                    {
+                        Mensaje = "El DNI no se encuentra en la base de datos.",
+                        Habilitado = false
+                    };
+                }
             }
             catch
             {
+                Console.WriteLine("Se consulto por el DNI " + numero + " y hubo un error");
                 throw new Exception("No se pudo obtener el dni");
             }
         }
@@ -66,7 +83,7 @@ namespace DCMDNIs.Server.Repositorio.Implementacion
                 throw new Exception("No se pudo obtener el dni");
             }
         }
-        
+
         public async Task<Dni> GetDniByNumero(int numero)
         {
             try

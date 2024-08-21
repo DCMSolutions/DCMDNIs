@@ -16,6 +16,7 @@ builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddDbContext<DcmdnisContext>();
 
 builder.Services.AddScoped<IDniRepositorio, DniRepositorio>();
+builder.Services.AddScoped<IConsultaRepositorio, ConsultaRepositorio>();
 
 var app = builder.Build();
 

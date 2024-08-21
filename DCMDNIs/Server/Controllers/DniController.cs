@@ -1,5 +1,6 @@
 ﻿using DCMDNIs.Server.Models;
 using DCMDNIs.Server.Repositorio.Contrato;
+using DCMDNIs.Shared.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,10 +15,12 @@ namespace DCMDNIs.Server.Controllers
     {
 
         private readonly IDniRepositorio _dni;
+        private readonly IConsultaRepositorio _consulta;
 
-        public DniController(IDniRepositorio dni)
+        public DniController(IDniRepositorio dni, IConsultaRepositorio consulta)
         {
             _dni = dni;
+            _consulta = consulta;
         }
 
         //funciones

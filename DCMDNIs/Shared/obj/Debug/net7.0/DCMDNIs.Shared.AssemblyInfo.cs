@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DCMDNIs.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d69c85c0dbab4972740ffc2744d7a81f79f4d464")]
 [assembly: System.Reflection.AssemblyProductAttribute("DCMDNIs.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DCMDNIs.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

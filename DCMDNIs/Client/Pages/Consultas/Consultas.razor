@@ -1,0 +1,33 @@
+﻿@page "/consultas"
+
+<h1><strong>Consultas</strong></h1>
+<br />
+<label>Lista de consultas recibidas</label>
+<br />
+<hr />
+<br />
+
+@if (listaDeConsultas != null)
+{
+    <div class="tablacontent" style="position:relative;">
+        <RadzenDataGrid AllowColumnResize="true" AllowAllowAlternatingRows="true" FilterMode="FilterMode.Simple" AllowSorting="false" PageSize="8" Density="Density.Compact"
+                        AllowPaging="true" ShowPagingSummary="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" EmptyText="No hay consultas aún."
+                        Data="@listaDeConsultas" TItem="Consulta" LogicalFilterOperator="LogicalFilterOperator.Or" PagerHorizontalAlign="HorizontalAlign.Center">
+            <Columns>
+                <RadzenDataGridColumn TItem="Consulta" Property="Fecha" Title="Fecha" Width="200px" />
+                <RadzenDataGridColumn TItem="Consulta" Property="Texto" Title="Texto" />
+            </Columns>
+
+        </RadzenDataGrid>
+    </div>
+}
+
+
+@code {
+    List<Consulta>? listaDeConsultas;
+
+    protected override async Task OnInitializedAsync()
+    {
+        listaDeConsultas = await confCrud.GetConsultas();
+    }
+}

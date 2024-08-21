@@ -14,4 +14,7 @@ public partial class Dni
     public string? Apellido { get; set; }
 
     public bool? Habilitado { get; set; }
+
+    public string? Mensaje { get; set; }
+
 }

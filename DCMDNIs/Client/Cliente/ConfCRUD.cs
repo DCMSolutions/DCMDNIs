@@ -18,6 +18,29 @@ namespace DCMDNIs.Client.Cliente
             _notif = notif;
         }
 
+        public async Task<List<Consulta>> GetConsultas()
+        {
+            try
+            {
+                var result = await _cliente.GetAsync("api/Consulta");
+                if (!result.IsSuccessStatusCode)
+                {
+                    var error = await result.Content.ReadAsStringAsync();
+                    ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Error", Detail = error, Duration = 4000 });
+                    return new();
+                }
+                else
+                {
+                    var rta = await result.Content.ReadFromJsonAsync<List<Consulta>>();
+                    return rta;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public async Task<List<DniDTO>> GetDnis()
         {
             try

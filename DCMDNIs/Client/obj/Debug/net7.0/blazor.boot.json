@@ -1,7 +1,7 @@
 {
   "entryAssembly": "DCMDNIs.Client",
   "resources": {
-    "hash": "sha256-gjjcZsAYsJxOBel5OjhWhjKLTHvkSJqRpFDqKKUTBuQ=",
+    "hash": "sha256-updfqN23nRkib7CjbMFfIC3YNvMzs0CWM4AM9JhjSPk=",
     "runtime": {
       "dotnet.7.0.20.wdt0wozn0u.js": "sha256-eaJTmow4t8eE7FZMZR5Ja41JMOefGCbIYDTdpclGsac=",
       "dotnet.timezones.blat": "sha256-gbATD5HDsHYtW8vdPYh9iSBY4O5CjvMeCSF5xXWF1xo=",
@@ -210,11 +210,11 @@
       "netstandard.dll": "sha256-N5CcC3sLzGBesbmeJAp5bwxABN9u7SwkIO5qfFjzoik=",
       "System.Private.CoreLib.dll": "sha256-bJS1DJmhjP7PvegYG+Z8O9EDtRY78HKinA3LUMVLlSQ=",
       "DCMDNIs.Shared.dll": "sha256-pr5LrmG5woygyYLj1zVpkVpP7ezbY5AsXwsrNLG9/YQ=",
-      "DCMDNIs.Client.dll": "sha256-Qqpb31zJpNqljs3qKVz9UyixCoxiSTDneGV6Y3AhyDc="
+      "DCMDNIs.Client.dll": "sha256-I6ZSiYmwaj6NpT0jIZyTSyDDH/oaGKkaV7OuCmVk2fU="
     },
     "pdb": {
       "DCMDNIs.Shared.pdb": "sha256-+zla3rJtxdHwSZyjkRbxvKKGeb1jwLCasl17aJghqH0=",
-      "DCMDNIs.Client.pdb": "sha256-W3hkTDDHgRpdXM03H7n1FVtaebijgnFU0R9NVvKmbFY="
+      "DCMDNIs.Client.pdb": "sha256-cy/oJ4AJMM7HGNtc9Ups8zB8fxWEWjmYJLFtUE62Apk="
     },
     "runtimeAssets": {
       "dotnet.wasm": {

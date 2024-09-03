@@ -62,12 +62,11 @@ namespace DCMDNIs.Server.Repositorio.Implementacion
             }
         }
 
-
         public async Task<bool> DeleteAllConsultas()
         {
             try
             {
-                File.WriteAllText(fileName, string.Empty);
+                CrearVacia();
                 return true;
             }
             catch

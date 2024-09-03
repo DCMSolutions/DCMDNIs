@@ -25,7 +25,20 @@ namespace DCMDNIs.Server.Controllers
             try
             {
                 var response = await _consulta.GetConsultas();
-                Console.WriteLine("resp" + response);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> DeleteAllConsultas()
+        {
+            try
+            {
+                var response = await _consulta.DeleteAllConsultas();
                 return Ok(response);
             }
             catch (Exception ex)

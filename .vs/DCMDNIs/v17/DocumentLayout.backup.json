@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\DCM\\DCMDNIs\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C4A42911-6DD2-4AEA-814A-E5285EFA3C1B}|DCMDNIs\\Server\\DCMDNIs.Server.csproj|d:\\dcm\\dcmdnis\\dcmdnis\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C4A42911-6DD2-4AEA-814A-E5285EFA3C1B}|DCMDNIs\\Server\\DCMDNIs.Server.csproj|solutionrelative:dcmdnis\\server\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{7599739C-C759-4A6A-B0E3-DEB7CD7E020B}|DCMDNIs\\Client\\DCMDNIs.Client.csproj|d:\\dcm\\dcmdnis\\dcmdnis\\client\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7599739C-C759-4A6A-B0E3-DEB7CD7E020B}|DCMDNIs\\Client\\DCMDNIs.Client.csproj|solutionrelative:dcmdnis\\client\\shared\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7599739C-C759-4A6A-B0E3-DEB7CD7E020B}|DCMDNIs\\Client\\DCMDNIs.Client.csproj|d:\\dcm\\dcmdnis\\dcmdnis\\client\\pages\\consultas\\consultas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7599739C-C759-4A6A-B0E3-DEB7CD7E020B}|DCMDNIs\\Client\\DCMDNIs.Client.csproj|solutionrelative:dcmdnis\\client\\pages\\consultas\\consultas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\DCM\\DCMDNIs\\DCMDNIs\\Server\\appsettings.json",
-              "RelativeDocumentMoniker": "DCMDNIs\\Server\\appsettings.json",
-              "ToolTip": "D:\\DCM\\DCMDNIs\\DCMDNIs\\Server\\appsettings.json",
-              "RelativeToolTip": "DCMDNIs\\Server\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-03T19:40:47.418Z",
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\DCM\\DCMDNIs\\DCMDNIs\\Client\\Shared\\MainLayout.razor",
+              "RelativeDocumentMoniker": "DCMDNIs\\Client\\Shared\\MainLayout.razor",
+              "ToolTip": "D:\\DCM\\DCMDNIs\\DCMDNIs\\Client\\Shared\\MainLayout.razor",
+              "RelativeToolTip": "DCMDNIs\\Client\\Shared\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-03T23:44:09.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Consultas.razor",
+              "DocumentMoniker": "D:\\DCM\\DCMDNIs\\DCMDNIs\\Client\\Pages\\Consultas\\Consultas.razor",
+              "RelativeDocumentMoniker": "DCMDNIs\\Client\\Pages\\Consultas\\Consultas.razor",
+              "ToolTip": "D:\\DCM\\DCMDNIs\\DCMDNIs\\Client\\Pages\\Consultas\\Consultas.razor",
+              "RelativeToolTip": "DCMDNIs\\Client\\Pages\\Consultas\\Consultas.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-03T23:43:38.283Z",
               "EditorCaption": ""
             }
           ]

@@ -1,6 +1,7 @@
 ﻿using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using DCMDNIs.Client.Pages.Dni;
 using DCMDNIs.Shared.Models;
 using Microsoft.AspNetCore.Components;
 using Radzen;
@@ -18,6 +19,7 @@ namespace DCMDNIs.Client.Cliente
             _notif = notif;
         }
 
+        //consultas
         public async Task<List<Consulta>> GetConsultas()
         {
             try
@@ -32,6 +34,8 @@ namespace DCMDNIs.Client.Cliente
                 else
                 {
                     var rta = await result.Content.ReadFromJsonAsync<List<Consulta>>();
+                    if(rta == null) return new();
+                    rta.Reverse();
                     return rta;
                 }
             }
@@ -41,6 +45,30 @@ namespace DCMDNIs.Client.Cliente
             }
         }
 
+        public async Task<bool> DeleteAllConsultas()
+        {
+            try
+            {
+                var result = await _cliente.DeleteAsync("api/Consulta");
+                if (!result.IsSuccessStatusCode)
+                {
+                    var error = await result.Content.ReadAsStringAsync();
+                    ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Error", Detail = error, Duration = 4000 });
+                    return false;
+                }
+                else
+                {
+                    var rta = await result.Content.ReadFromJsonAsync<bool>();
+                    return rta;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        //dnis
         public async Task<List<DniDTO>> GetDnis()
         {
             try

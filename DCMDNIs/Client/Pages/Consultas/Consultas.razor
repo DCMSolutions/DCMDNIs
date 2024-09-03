@@ -6,6 +6,7 @@
 <br />
 <hr />
 <RadzenButton ButtonStyle="ButtonStyle.Success" Click=@(() => refreshConsultas())><FeatherRefreshCw Color="black" /></RadzenButton>
+<RadzenButton ButtonStyle="ButtonStyle.Danger" Click=@(() => deleteConsultas())><FeatherTrash Color="black" /></RadzenButton>
 
 <br />
 <br />
@@ -37,6 +38,13 @@
 
     async void refreshConsultas()
     {
+        listaDeConsultas = await confCrud.GetConsultas();
+        await grid.Reload();
+    }
+
+    async void deleteConsultas()
+    {
+        await confCrud.DeleteAllConsultas();
         listaDeConsultas = await confCrud.GetConsultas();
         await grid.Reload();
     }

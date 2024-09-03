@@ -10,6 +10,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "DCMDNIs.Server.Controllers.ConsultaController",
+    "Method": "DeleteAllConsultas",
+    "RelativePath": "api/Consulta",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "DCMDNIs.Server.Controllers.DniController",
     "Method": "GetDnis",
     "RelativePath": "api/Dni",

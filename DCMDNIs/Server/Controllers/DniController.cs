@@ -29,7 +29,7 @@ namespace DCMDNIs.Server.Controllers
         {
             try
             {
-                var response = await _dni.GetHabilitadoByNumero(numero);
+                var response = _dni.GetHabilitadoByNumero(numero);
                 return Ok(response);
             }
             catch (Exception ex)
@@ -44,7 +44,21 @@ namespace DCMDNIs.Server.Controllers
         {
             try
             {
-                var response = await _dni.GetDnis();
+                var response = _dni.GetDnis();
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet("{nextId}")]
+        public async Task<IActionResult> GetNextId()
+        {
+            try
+            {
+                var response = _dni.GetNextId();
                 return Ok(response);
             }
             catch (Exception ex)
@@ -58,7 +72,7 @@ namespace DCMDNIs.Server.Controllers
         {
             try
             {
-                var response = await _dni.GetDniById(id);
+                var response = _dni.GetDniById(id);
                 return Ok(response);
             }
             catch (Exception ex)
@@ -72,7 +86,7 @@ namespace DCMDNIs.Server.Controllers
         {
             try
             {
-                var response = await _dni.GetDniByNumero(numero);
+                var response = _dni.GetDniByNumero(numero);
                 return Ok(response);
             }
             catch (Exception ex)
@@ -82,25 +96,11 @@ namespace DCMDNIs.Server.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddDni([FromBody] Dni dni)
+        public async Task<IActionResult> AddEditDni([FromBody] Dni dni)
         {
             try
             {
-                var response = await _dni.AddDni(dni);
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-
-        [HttpPut]
-        public async Task<IActionResult> EditDni([FromBody] Dni dni)
-        {
-            try
-            {
-                var response = await _dni.EditDni(dni);
+                var response = _dni.AddEditDni(dni);
                 return Ok(response);
             }
             catch (Exception ex)
@@ -114,7 +114,7 @@ namespace DCMDNIs.Server.Controllers
         {
             try
             {
-                var response = await _dni.DeleteDni(idDni);
+                var response = _dni.DeleteDni(idDni);
                 return Ok(response);
             }
             catch (Exception ex)

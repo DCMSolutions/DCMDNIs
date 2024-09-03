@@ -1,4 +1,3 @@
-using DCMDNIs.Server.Context;
 using DCMDNIs.Server.Repositorio.Contrato;
 using DCMDNIs.Server.Repositorio.Implementacion;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -12,8 +11,6 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddHttpClient();
 builder.Services.AddAutoMapper(typeof(Program));
-
-builder.Services.AddDbContext<DcmdnisContext>();
 
 builder.Services.AddScoped<IDniRepositorio, DniRepositorio>();
 builder.Services.AddScoped<IConsultaRepositorio, ConsultaRepositorio>();

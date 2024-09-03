@@ -1,0 +1,118 @@
+[
+  {
+    "ContainingType": "DCMDNIs.Server.Controllers.ConsultaController",
+    "Method": "GetConsultas",
+    "RelativePath": "api/Consulta",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DCMDNIs.Server.Controllers.DniController",
+    "Method": "GetDnis",
+    "RelativePath": "api/Dni",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DCMDNIs.Server.Controllers.DniController",
+    "Method": "AddEditDni",
+    "RelativePath": "api/Dni",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dni",
+        "Type": "DCMDNIs.Server.Models.Dni",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DCMDNIs.Server.Controllers.DniController",
+    "Method": "GetDniById",
+    "RelativePath": "api/Dni/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DCMDNIs.Server.Controllers.DniController",
+    "Method": "DeleteDni",
+    "RelativePath": "api/Dni/{idDni}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idDni",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DCMDNIs.Server.Controllers.DniController",
+    "Method": "GetNextId",
+    "RelativePath": "api/Dni/{nextId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nextId",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DCMDNIs.Server.Controllers.DniController",
+    "Method": "GetHabilitadoByNumero",
+    "RelativePath": "api/Dni/habilitado/{numero}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numero",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DCMDNIs.Server.Controllers.DniController",
+    "Method": "GetDniByNumero",
+    "RelativePath": "api/Dni/numero/{numero}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "numero",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

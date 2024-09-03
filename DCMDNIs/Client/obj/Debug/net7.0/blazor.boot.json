@@ -1,9 +1,9 @@
 {
   "entryAssembly": "DCMDNIs.Client",
   "resources": {
-    "hash": "sha256-FjkVii2ZIro7fhWRxAqV81e3+S8Rv+bLl/jFDAJIGt4=",
+    "hash": "sha256-gjjcZsAYsJxOBel5OjhWhjKLTHvkSJqRpFDqKKUTBuQ=",
     "runtime": {
-      "dotnet.7.0.20.ly3k7z5ln4.js": "sha256-eaJTmow4t8eE7FZMZR5Ja41JMOefGCbIYDTdpclGsac=",
+      "dotnet.7.0.20.wdt0wozn0u.js": "sha256-eaJTmow4t8eE7FZMZR5Ja41JMOefGCbIYDTdpclGsac=",
       "dotnet.timezones.blat": "sha256-gbATD5HDsHYtW8vdPYh9iSBY4O5CjvMeCSF5xXWF1xo=",
       "dotnet.wasm": "sha256-2P6rVlE+GN7v/KBZsI/zwouhfpV38+1lEl5FMslgb4A=",
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -209,12 +209,12 @@
       "mscorlib.dll": "sha256-HYyp9hO+GKFyupcEiY1PxtBBXbHzefsO3Q8RiQTaNCA=",
       "netstandard.dll": "sha256-N5CcC3sLzGBesbmeJAp5bwxABN9u7SwkIO5qfFjzoik=",
       "System.Private.CoreLib.dll": "sha256-bJS1DJmhjP7PvegYG+Z8O9EDtRY78HKinA3LUMVLlSQ=",
-      "DCMDNIs.Shared.dll": "sha256-p53PAMG5AT3iwfpO1WZHK709FyXjRFAlpMZYwesJs8E=",
-      "DCMDNIs.Client.dll": "sha256-8DQEGbMK5ijmMdHaUHtRi5lNoOBx336gx+CmKlSkmxE="
+      "DCMDNIs.Shared.dll": "sha256-pr5LrmG5woygyYLj1zVpkVpP7ezbY5AsXwsrNLG9/YQ=",
+      "DCMDNIs.Client.dll": "sha256-Qqpb31zJpNqljs3qKVz9UyixCoxiSTDneGV6Y3AhyDc="
     },
     "pdb": {
-      "DCMDNIs.Shared.pdb": "sha256-qr9XKEmpAzhOUXdlfzYdDbwrHFmt6bpn4hZPp+P5K/8=",
-      "DCMDNIs.Client.pdb": "sha256-d5uLgoMusQomcstYB2/lC2N3D+rjBOdzL/2rHJVfKJc="
+      "DCMDNIs.Shared.pdb": "sha256-+zla3rJtxdHwSZyjkRbxvKKGeb1jwLCasl17aJghqH0=",
+      "DCMDNIs.Client.pdb": "sha256-W3hkTDDHgRpdXM03H7n1FVtaebijgnFU0R9NVvKmbFY="
     },
     "runtimeAssets": {
       "dotnet.wasm": {

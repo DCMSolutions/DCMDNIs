@@ -1196,12 +1196,18 @@
           "Radzen.Blazor": "4.25.6"
         },
         "runtime": {
-          "DCMDNIs.Client.dll": {}
+          "DCMDNIs.Client.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "DCMDNIs.Shared/1.0.0": {
         "runtime": {
-          "DCMDNIs.Shared.dll": {}
+          "DCMDNIs.Shared.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

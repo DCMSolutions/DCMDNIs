@@ -10,14 +10,14 @@ namespace DCMDNIs.Server.Repositorio.Contrato
     public interface IDniRepositorio
     {
         //funciones
-        Task<Dni> GetHabilitadoByNumero(int numero);
+        Dni GetHabilitadoByNumero(int numero);
         
         //CRUD Dnis
-        Task<List<Dni>> GetDnis();
-        Task<Dni> GetDniById(int id);
-        Task<Dni> GetDniByNumero(int numero);
-        Task<bool> AddDni(Dni dni);
-        Task<bool> EditDni(Dni dni);
-        Task<bool> DeleteDni(int idDni);
+        List<Dni> GetDnis();
+        int GetNextId();
+        Dni GetDniById(int id);
+        Dni GetDniByNumero(int numero);
+        bool AddEditDni(Dni dni);
+        bool DeleteDni(int idDni);
     }
 }

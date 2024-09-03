@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DCMDNIs.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d69c85c0dbab4972740ffc2744d7a81f79f4d464")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3b6fa716352ae92596f83d73358c8b64e8f325b")]
 [assembly: System.Reflection.AssemblyProductAttribute("DCMDNIs.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DCMDNIs.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

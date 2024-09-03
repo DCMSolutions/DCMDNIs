@@ -58,19 +58,13 @@ else
         else
         {
             dni.Habilitado = false;
+            dni.Id = await confCrud.NextId();
         }
     }
 
     async Task Save()
     {
-        if (idDni == 0)
-        {
-            var orta = await confCrud.AddDni(dni);
-        }
-        else
-        {
-            var orta = await confCrud.EditDni(dni);
-        }
+        var orta = await confCrud.AddEditDni(dni);
         nav.NavigateTo("/dnis");
     }
 

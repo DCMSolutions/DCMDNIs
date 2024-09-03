@@ -64,6 +64,29 @@ namespace DCMDNIs.Client.Cliente
             }
         }
 
+        public async Task<int> NextId()
+        {
+            try
+            {
+                var result = await _cliente.GetAsync("api/dni/nextId");
+                if (!result.IsSuccessStatusCode)
+                {
+                    var error = await result.Content.ReadAsStringAsync();
+                    ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Error", Detail = error, Duration = 4000 });
+                    return new();
+                }
+                else
+                {
+                    var rta = await result.Content.ReadFromJsonAsync<int>();
+                    return rta;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public async Task<DniDTO> GetDniById(int idDni)
         {
             try
@@ -87,34 +110,11 @@ namespace DCMDNIs.Client.Cliente
             }
         }
 
-        public async Task<bool> AddDni(DniDTO dni)
+        public async Task<bool> AddEditDni(DniDTO dni)
         {
             try
             {
                 var result = await _cliente.PostAsJsonAsync("api/dni" , dni);
-                if (!result.IsSuccessStatusCode)
-                {
-                    var error = await result.Content.ReadAsStringAsync();
-                    ShowNotification(new NotificationMessage { Severity = NotificationSeverity.Error, Summary = "Error", Detail = error, Duration = 4000 });
-                    return false;
-                }
-                else
-                {
-                    var rta = await result.Content.ReadFromJsonAsync<bool>();
-                    return rta;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-        }
-
-        public async Task<bool> EditDni(DniDTO dni)
-        {
-            try
-            {
-                var result = await _cliente.PutAsJsonAsync("api/dni", dni);
                 if (!result.IsSuccessStatusCode)
                 {
                     var error = await result.Content.ReadAsStringAsync();

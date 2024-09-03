@@ -7267,7 +7267,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\Pedro\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -7275,11 +7275,11 @@
       "projectUniqueName": "D:\\DCM\\DCMDNIs\\DCMDNIs\\Server\\DCMDNIs.Server.csproj",
       "projectName": "DCMDNIs.Server",
       "projectPath": "D:\\DCM\\DCMDNIs\\DCMDNIs\\Server\\DCMDNIs.Server.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Pedro\\.nuget\\packages\\",
       "outputPath": "D:\\DCM\\DCMDNIs\\DCMDNIs\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7366,7 +7366,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

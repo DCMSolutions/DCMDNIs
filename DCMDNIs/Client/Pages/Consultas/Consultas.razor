@@ -5,13 +5,16 @@
 <label>Lista de consultas recibidas</label>
 <br />
 <hr />
+<RadzenButton ButtonStyle="ButtonStyle.Success" Click=@(() => refreshConsultas())><FeatherRefreshCw Color="black" /></RadzenButton>
+
+<br />
 <br />
 
 @if (listaDeConsultas != null)
 {
     <div class="tablacontent" style="position:relative;">
         <RadzenDataGrid AllowColumnResize="true" AllowAllowAlternatingRows="true" FilterMode="FilterMode.Simple" AllowSorting="false" PageSize="8" Density="Density.Compact"
-                        AllowPaging="true" ShowPagingSummary="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" EmptyText="No hay consultas aún."
+                        AllowPaging="true" ShowPagingSummary="true" FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" EmptyText="No hay consultas aún." @ref="grid"
                         Data="@listaDeConsultas" TItem="Consulta" LogicalFilterOperator="LogicalFilterOperator.Or" PagerHorizontalAlign="HorizontalAlign.Center">
             <Columns>
                 <RadzenDataGridColumn TItem="Consulta" Property="Fecha" Title="Fecha" Width="200px" />
@@ -25,9 +28,16 @@
 
 @code {
     List<Consulta>? listaDeConsultas;
+    RadzenDataGrid<Consulta> grid;
 
     protected override async Task OnInitializedAsync()
     {
         listaDeConsultas = await confCrud.GetConsultas();
+    }
+
+    async void refreshConsultas()
+    {
+        listaDeConsultas = await confCrud.GetConsultas();
+        await grid.Reload();
     }
 }

@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\DCM\\DCMDNIs\\DCMDNIs\\Shared\\DCMDNIs.Shared.csproj",
         "projectName": "DCMDNIs.Shared",
         "projectPath": "D:\\DCM\\DCMDNIs\\DCMDNIs\\Shared\\DCMDNIs.Shared.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Pedro\\.nuget\\packages\\",
         "outputPath": "D:\\DCM\\DCMDNIs\\DCMDNIs\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using DCMDNIs.Server.Context;
 using DCMDNIs.Server.Models;
 using DCMDNIs.Server.Repositorio.Contrato;
 using DCMDNIs.Shared.Models;
